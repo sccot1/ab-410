@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aether · AB-410",
+      "hasCanvas": false,
+      "bodyTextLen": 1457,
+      "bodyTextHash": "194874d0830af94e8326eb8ba155863d659c180062d7fcba87305b52c39f2fa2",
+      "bodyTextPrefix": "Saltar al contenido Aether AB-410 Inicio Aprender Practicar Exam",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aether · AB-410",
+      "hasCanvas": false,
+      "bodyTextLen": 1403,
+      "bodyTextHash": "af0938a6c6eb6bec9b839305f9242926c09463c8f202bd35666e8d4e59453e9c",
+      "bodyTextPrefix": "Saltar al contenido Aether MICROSOFT · AB-410 Aprueba Intelligen",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

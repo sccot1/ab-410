@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aether</title>
+    <style>
+      @font-face {
+        font-family: "Fraunces";
+        font-style: normal;
+        font-weight: 500;
+        src: url("og-fonts/Fraunces-500.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Figtree";
+        font-style: normal;
+        font-weight: 500;
+        src: url("og-fonts/Figtree-500.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "IBM Plex Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: url("og-fonts/IBMPlexMono-400.ttf") format("truetype");
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #0b0c0e;
+      }
+
+      .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        background:
+          radial-gradient(ellipse 72% 58% at 50% 48%, #141618 0%, #0b0c0e 68%);
+        color: #edeeef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .ring {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 540px;
+        height: 540px;
+        border: 1px solid color-mix(in oklab, #b8c4ce 16%, transparent);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .ring-2 {
+        width: 620px;
+        height: 620px;
+        border-color: color-mix(in oklab, #b8c4ce 8%, transparent);
+      }
+
+      .lockup {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .mark {
+        width: 11px;
+        height: 11px;
+        background: #b8c4ce;
+        transform: rotate(45deg);
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        font-family: "Fraunces", "Times New Roman", serif;
+        font-weight: 500;
+        font-size: 152px;
+        line-height: 0.92;
+        letter-spacing: -0.04em;
+        color: #edeeef;
+        font-optical-sizing: none;
+      }
+
+      .rule {
+        width: 52px;
+        height: 1px;
+        margin: 28px 0 20px;
+        background: color-mix(in oklab, #b8c4ce 55%, transparent);
+      }
+
+      .tag {
+        font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 0.42em;
+        color: #b8c4ce;
+        padding-left: 0.42em;
+      }
+
+      .grain {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0.055;
+        mix-blend-mode: overlay;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="ring ring-2"></div>
+      <div class="ring"></div>
+      <div class="lockup">
+        <div class="mark" aria-hidden="true"></div>
+        <h1>Aether</h1>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="tag">AB-410</p>
+      </div>
+      <svg class="grain" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <filter id="n">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#n)" />
+      </svg>
+    </div>
+  </body>
+</html>
